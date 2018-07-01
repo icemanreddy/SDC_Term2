@@ -65,6 +65,8 @@ UKF::UKF() {
   weights_ = VectorXd ((2*n_aug_)+1);
   lambda_=3-n_aug_;
   x_ << 0,0,0,0,0;
+  NIS_r=0;
+  NIS_l=0;
 }
 
 UKF::~UKF() {}
@@ -416,11 +418,11 @@ void UKF::UpdateCommon(MeasurementPackage meas_package,int n_z,MatrixXd Zsig,Mat
 
   //NIS values
   if (n_z==2){
-    double NIS=z_diff.transpose()*S.inverse()*z_diff;
-    cout<< "Lidar "<<NIS<<endl;
+    NIS_l=z_diff.transpose()*S.inverse()*z_diff;
+    cout<< "Lidar "<<NIS_l<<endl;
   }else {
-    double NIS=z_diff.transpose()*S.inverse()*z_diff;
-    cout<< "Radar "<<NIS<<endl;
+    NIS_r=z_diff.transpose()*S.inverse()*z_diff;
+    cout<< "Radar "<<NIS_r<<endl;
   }
 
 
