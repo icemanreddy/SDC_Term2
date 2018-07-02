@@ -64,7 +64,12 @@ for instructions and the project rubric.
 I initially started with a P controller that I tuned and then went on making it a PD controller and then finally a PID controller.
 In the initial case of just using P ,we see that the car drives on the track well enough but keeps swaying around the middle of the road.This was as expected since the car overshoots ,the corrects and overshoots again.
 
-Adding the D component stablised the car to an large extent. The integral value caused huge steering values when I tried values that were similar to the P or D values. I then chose values of many magnitudes smaller and that seemed to work. However, I didnt see much of a difference between the performance of PID and PD controller. PID might be a fraction faster to recover after a turn is what I noted from looking at the videos of the two.
+Adding the D component stablised the car to an large extent. The integral value caused huge steering values when I tried values that were similar to the P or D values. I then chose values of many magnitudes smaller and that seemed to work. However, I didn't see much of a difference between the performance of PID and PD controller. PID might be a fraction faster to recover after a turn is what I noted from looking at the videos of the two.
 
 
 I found the parameters by manual tuning.
+
+## Videos
+[ P controller ](https://youtu.be/eJkcOhemmyk)
+[ PD controller](https://youtu.be/6FYON_hj1pA)
+[ PID controller](https://youtu.be/u4KrdA5RwvM)
