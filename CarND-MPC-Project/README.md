@@ -9,6 +9,8 @@ The model being used is the Global Kinematic model.There are 4 state variables a
 State: x,y,psi(heading)and v(velocity)
 
 Actuators:delta(change in heading) and  a (acceleration/deceleration)
+
+
 ![State and actuators](State_and_actuators.png)
 
 
