@@ -10,6 +10,8 @@ State: x,y,psi(heading)and v(velocity)
 
 Actuators:delta(change in heading) and  a (acceleration/deceleration)
 ![State and actuators](State_and_actuators.png)
+
+
 ![Equations](Model_equations.png)
 
 
@@ -26,7 +28,7 @@ It allows for better/smoother actuator values as we approach a turn.
 
 ## How is latency handled ?
 
-The position and speed after 100ms is calculated using the existing values in main.cpp .The calculations are done for that position and speed.Px ,py and velocity values that are received to reflect the state after 100ms. 
+In main.cpp, when the position and velocity values are received from the simulator they are modified to reflect the values 100ms later. This is done using basic Kinematic equations. The resulatant values are what are used in the subsequent calculations.
 
 ## Dependencies
 
